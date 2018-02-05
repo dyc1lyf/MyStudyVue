@@ -1,15 +1,17 @@
 <template>
   <div id="app">
-      <test></test>
+      <!--<test msg="这是新的属性值！"></test>-->
+      <users></users>
   </div>
 </template>
 
 <script>
 import Test from "./components/test"
+import Users from "./components/Users"
 export default {
   name: 'app',
   components: {
-    Test
+    Test,Users
   }
 }
 </script>
