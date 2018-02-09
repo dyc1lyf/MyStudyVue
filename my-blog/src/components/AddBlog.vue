@@ -20,7 +20,7 @@
       </div>
       <label>作者：</label>
       <select v-model="blog.author">
-        <option v-for="author in authors">
+        <option v-for="author in authors" :key="author">
           {{author}}
         </option>
       </select>
@@ -37,7 +37,7 @@
       <p>{{blog.content}}</p>
       <p>博客分类：</p>
       <ul>
-        <li v-for="category in blog.categories">
+        <li v-for="category in blog.categories" :key="category">
           {{category}}
         </li>
       </ul>
@@ -47,6 +47,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   // http://jsonplaceholder.typicode.com/
   // http://jsonplaceholder.typicode.com/posts
@@ -65,13 +66,10 @@ export default {
   },
   methods:{
     post:function(){
-      this.$http.post("http://jsonplaceholder.typicode.com/posts",{
-        title:this.blog.title,
-        body:this.blog.content,
-        userId:1
-      })
-        .then(function(data){
-          console.log(data)
+      // var _this = this;
+      // this.$http.post("https://vuedemo-2c3a0.firebaseio.com/post.json",this.blog)
+       axios.post("/post.json",this.blog)
+        .then((data)=>{
           this.submmited=true
         })
     }

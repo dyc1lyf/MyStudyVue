@@ -18,6 +18,7 @@
 </script>
 <style scoped>
  ul{
+     
     list-style:none;
     text-align:center;
     margin: 0;
@@ -33,9 +34,11 @@
     border-radius:5px;
   }
   nav{
+      max-width: 600px;
+      box-sizing: border-box;
       background-color: crimson;
       padding: 30px 0;
-      margin-bottom: 40px;
+      margin: 0 auto 20px auto;
   }
   .router-link-active{
       background: rgba(255,255,255,0.8);
