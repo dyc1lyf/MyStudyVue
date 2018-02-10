@@ -8,7 +8,7 @@ import Routes from './routes'
 import axios from 'axios'
 
 // 全局配置axios
-axios.defaults.baseURL = 'https://vuedemo-2c3a0.firebaseio.com'
+// axios.defaults.baseURL = 'https://wd0993696679bwrcnd.wilddogio.com/'
 // axios.defaults.headers.common["Authorization"] = "Token"
 // axios.defaults.headers.post['Content-type'] = 'application/urlencode'
 // axios.defaults.headers.get['Accepts'] = 'application/json'
