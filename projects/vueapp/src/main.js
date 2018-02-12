@@ -14,8 +14,8 @@ const router = new VueRouter({
   mode:'history',
   base:__dirname,
   routes:[
-    {path:"/",compontent:Users},
-    {path:"/test",compontent:Test}
+    {path:"/",component:Users},
+    {path:"/test",component:Test}
   ]
 })
 /* eslint-disable no-new */
