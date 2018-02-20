@@ -29,28 +29,27 @@
 
     <div v-if="submmited">
       <h3>发布成功</h3>
+      <div id="preview">
+        <h3>博客总览</h3>
+        <p>博客标题：{{blog.title}}</p>
+        <p>博客内容：</p>
+        <p>{{blog.content}}</p>
+        <p>博客分类：</p>
+        <ul>
+          <li v-for="category in blog.categories" :key="category">
+            {{category}}
+          </li>
+        </ul>
+        <p>作者：{{blog.author}}</p>
+      </div>
     </div>
-    <div id="preview">
-      <h3>博客总览</h3>
-      <p>博客标题：{{blog.title}}</p>
-      <p>博客内容：</p>
-      <p>{{blog.content}}</p>
-      <p>博客分类：</p>
-      <ul>
-        <li v-for="category in blog.categories" :key="category">
-          {{category}}
-        </li>
-      </ul>
-      <p>作者：{{blog.author}}</p>
-    </div>
+
   </div>
 </template>
 
 <script>
 import axios from 'axios'
 export default {
-  // http://jsonplaceholder.typicode.com/
-  // http://jsonplaceholder.typicode.com/posts
   name: 'add-blog',
   data () {
     return {
@@ -88,46 +87,54 @@ export default {
     max-width: 600px;
     padding: 20px;
   }
-  label{
-    display:block;
+  
+  label {
+    display: block;
     margin: 20px 0 10px;
   }
-  input[type="text"],textarea,select{
-    display:block;
+  
+  input[type="text"],
+  textarea,
+  select {
+    display: block;
     width: 100%;
     padding: 8px;
   }
-  textarea{
+  
+  textarea {
     height: 200px;
   }
-  #checkboxes label{
-    display:inline-block;
+  
+  #checkboxes label {
+    display: inline-block;
     margin-top: 0;
   }
-  #checkboxes input{
-    display:inline-block;
+  
+  #checkboxes input {
+    display: inline-block;
     margin-right: 10px;
   }
-  button{
-    display:block;
+  
+  button {
+    display: block;
     margin: 20px 0;
     background-color: crimson;
-    color:#fff;
-    border:0;
+    color: #fff;
+    border: 0;
     padding: 14px;
-    border-radius:4px;
+    border-radius: 4px;
     font-size: 18px;
-    cursor:pointer;
+    cursor: pointer;
   }
-
   /*博客总览*/
-  #preview{
+  
+  #preview {
     padding: 10px 20px;
-    border:1px dotted #ccc;
+    border: 1px dotted #ccc;
     margin: 30px 0;
   }
-  #preview h3{
+  
+  #preview h3 {
     margin-top: 10px;
-
   }
 </style>

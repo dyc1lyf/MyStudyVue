@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const instance = axios.create({
-    baseURL:'https://vuedemo-2c3a0.firebaseio.com'
+    baseURL:'https://wd0993696679bwrcnd.wilddogio.com/'
 })
 
 // 全局
