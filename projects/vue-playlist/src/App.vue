@@ -18,14 +18,6 @@
 
 export default {
   name: 'app',
-  data(){
-  	
-  	
-  },
-  methods:{
-    
-    
-  },
 }
 </script>
 <!--3.样式：解决样式-->
